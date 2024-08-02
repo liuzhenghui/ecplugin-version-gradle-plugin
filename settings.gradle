@@ -1,0 +1,52 @@
+pluginManagement {
+    repositories {
+        mavenLocal()
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        // 加载 gradle.properties 中仓库信息
+        this.properties.keySet().findAll { it =~ /^((?:release|snapshot)\.)?(publish\.)?repository@.*/ }.each {
+            String text = (this.properties.get(it) as String).replaceAll('\\\\:', '\b').replaceAll('\\\\@', '\t')
+            def matcher = text =~ /^([^:]+):([^@]+)@(https?:\\/\\/[^@\s]+)/
+            if (matcher.matches()) {
+                maven {
+                    credentials {
+                        username = matcher.group(1).replaceAll('\b', ':').replaceAll('\t', '@')
+                        password = matcher.group(2).replaceAll('\b', ':').replaceAll('\t', '@')
+                    }
+                    url = matcher.group(3).replaceAll('\b', ':').replaceAll('\t', '@')
+                }
+            } else {
+                maven { url = this.properties.get(it) }
+            }
+        }
+        gradlePluginPortal()
+        mavenCentral()
+    }
+}
+
+dependencyResolutionManagement {
+    repositories {
+        mavenLocal()
+        maven { url 'https://maven.aliyun.com/repository/public' }
+        maven { url 'https://mirrors.cloud.tencent.com/nexus/repository/maven-public' }
+        // 加载 gradle.properties 中仓库信息
+        this.properties.keySet().findAll { it =~ /^((?:release|snapshot)\.)?(publish\.)?repository@.*/ }.each {
+            String text = (this.properties.get(it) as String).replaceAll('\\\\:', '\b').replaceAll('\\\\@', '\t')
+            def matcher = text =~ /^([^:]+):([^@]+)@(https?:\\/\\/[^@\s]+)/
+            if (matcher.matches()) {
+                maven {
+                    credentials {
+                        username = matcher.group(1).replaceAll('\b', ':').replaceAll('\t', '@')
+                        password = matcher.group(2).replaceAll('\b', ':').replaceAll('\t', '@')
+                    }
+                    url = matcher.group(3).replaceAll('\b', ':').replaceAll('\t', '@')
+                }
+            } else {
+                maven { url = this.properties.get(it) }
+            }
+        }
+        mavenCentral()
+    }
+}
+
+
+
