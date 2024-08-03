@@ -20,13 +20,13 @@ reckon version: 0.0.3  ->  0.0.4-alpha
 
 ## 方法
 
-| task         | 说明    |
-|--------------|-------|
-| build        | 构建    |
-| release      | 发布新版本 |
-| releaseQuiet | 发布新版本 |
+| task       | 说明                                                                                                                                                                     |
+|------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| build      | 构建                                                                                                                                                                     |
+| release    | 发布新版本,示例: `gradle release -Pversion.scope=minor`。<br>可选参数: <br>1. version.scope: 指定递增范围，选项为 major、minor、patch(默认)   <br>2. version.version: 指定发布版本号，将忽略推算的版本号，如`1.2.0` |
+| releaseGUI | 图形界面发布新版本                                                                                                                                                              |
 
-## 参数
+## 配置参数
 
 | 参数                       | 说明                  |
 |--------------------------|---------------------|
@@ -36,16 +36,18 @@ reckon version: 0.0.3  ->  0.0.4-alpha
 默认配置:
 
 ```groovy
-// Git分支与版本号Stage 对应关系
-BranchStageList branches = BranchStageList.create()
-        .branch(['main', 'master'], 'rc')
-        .branch('test', 'beta', 'beta')
-        .branch('release/**', 'rc')
-        .branch('hotfix/**', 'rc')
-        .branch('**', 'alpha', 'alpha')
+reckonVersion {
+    // Git分支与版本号Stage 对应关系
+    branches.empty()
+            .branch(['main', 'master'], 'rc')
+            .branch('test', 'beta', 'beta')
+            .branch('release/**', 'rc')
+            .branch('hotfix/**', 'rc')
+            .branch('**', 'alpha', 'alpha')
 
-// 发布时自动合并新内容的分支
-List<String> branchesReleaseMergeInto = ['main', 'master', 'test', 'develop/**']
+    // 发布时自动合并新内容的分支
+    branchesReleaseMergeInto = ['main', 'master', 'test', 'develop/**']
+}
 ```
 
 ## 说明
@@ -57,7 +59,7 @@ group = 'com.xxx.xxx'
 version = 'auto'
 ```
 
-2. 插件已发布至 Gradle Plugin Portal ，如提示下载失败，请在`settings.gradle`增加配置
+2. 插件已发布至 Gradle Plugin Portal ，如提示下载失败，在`settings.gradle`增加配置如下:
 
 ```
 pluginManagement {
