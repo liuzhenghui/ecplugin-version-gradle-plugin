@@ -8,6 +8,6 @@ group = 'com.ecplugin.gradle.plugin'
 version = 'auto'
 
 gitbook {
-//    keepOrderNumber = true
+    root = 'document'
     npmBuild = 'source ~/.zshrc && nvm use && node -v && npm install && gitbook build ./ ../book'
 }
