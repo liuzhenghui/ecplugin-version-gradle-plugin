@@ -2,7 +2,7 @@
 
 本项目为 Gradle 插件，用于`build`与`release`时自动根据 Git 推算版本号(遵循[semver](https://semver.org)规范)
 
-详细说明请查看[在线文档](https://github.com/liuzhenghui/ecplugin-version-gradle-plugin)
+详细说明请查看[在线文档](https://liuzhenghui.github.io/ecplugin-version-gradle-plugin/)
 
 ## 使用方法
 
