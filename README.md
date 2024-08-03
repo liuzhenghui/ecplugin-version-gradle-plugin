@@ -1,5 +1,37 @@
-![300.jpeg](assets/f643b351b8d1446acaa08129e6d28297.png)
+# ecplugin-version-gradle-plugin
 
----
+本项目为 Gradle 插件，用于编辑与发布时自动根据 Git 推算版本号
 
-当前为缺省内容，请编辑
+## 使用方法
+
+```
+plugins {
+    id 'com.ecplugin.gradle.plugin.version' version '<version>'
+}
+```
+
+build
+
+```
+./gradlew build
+```
+
+release
+
+```
+./gradlew release
+```
+
+## 说明
+
+插件已发布至 Gradle Plugin Portal ，如提示下载失败，请在`settings.gradle`增加配置
+
+```
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        ...
+    }
+}
+...
+```
