@@ -1,6 +1,6 @@
 # ecplugin-version-gradle-plugin
 
-本项目为 Gradle 插件，用于编辑与发布时自动根据 Git 推算版本号(遵循[semver](https://semver.org)规范)
+本项目为 Gradle 插件，用于构建与发布时自动根据 Git 推算版本号(遵循[semver](https://semver.org)规范)
 
 详细说明请查看[在线文档](https://github.com/liuzhenghui/ecplugin-version-gradle-plugin)
 
