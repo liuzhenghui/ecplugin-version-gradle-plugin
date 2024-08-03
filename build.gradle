@@ -5,7 +5,7 @@ plugins {
 }
 
 group = 'com.ecplugin.gradle.plugin'
-//version = '0.0.1'
+version = 'auto'
 
 gitbook {
 //    keepOrderNumber = true
