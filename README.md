@@ -21,14 +21,14 @@ reckon version: 0.0.3  ->  0.0.4-alpha
 
 ## gradle.properties 配置 Git 信息
 
-> 若用户名或密码包含`@`或者`:`，前面增加`\\`。
-> 如: `git@github.com=paul\\@gmail.com:pwd\\:111@https://github.com/xxx/`
-
 ```
 # git
 git@gitee.com=username:password@https://gitee.com/xxx/
 git@github.com=username:password@https://github.com/xxx/
 ```
+
+> 若用户名或密码包含`@`或者`:`，前面增加`\\`。
+> 如: `git@github.com=paul\\@gmail.com:pwd\\:111@https://github.com/xxx/`
 
 ## 方法
 
