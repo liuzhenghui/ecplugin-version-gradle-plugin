@@ -1,6 +1,7 @@
 # ecplugin-version-gradle-plugin
 
-本项目为 Gradle 插件，用于编辑与发布时自动根据 Git 推算版本号
+本项目为 Gradle 插件，用于编辑与发布时自动根据 Git 推算版本号(遵循[semver](https://semver.org)规范)
+详细说明请查看[在线文档](https://github.com/liuzhenghui/ecplugin-version-gradle-plugin)
 
 ## 使用方法
 
@@ -17,9 +18,46 @@ plugins {
 reckon version: 0.0.3  ->  0.0.4-alpha
 ```
 
+## 方法
+
+| task         | 说明    |
+|--------------|-------|
+| build        | 构建    |
+| release      | 发布新版本 |
+| releaseQuiet | 发布新版本 |
+
+## 参数
+
+| 参数                       | 说明                  |
+|--------------------------|---------------------|
+| branches                 | Git分支与版本号Stage 对应关系 |
+| branchesReleaseMergeInto | 发布时自动合并新内容的分支       |
+
+默认配置:
+
+```groovy
+// Git分支与版本号Stage 对应关系
+BranchStageList branches = BranchStageList.create()
+        .branch(['main', 'master'], 'rc')
+        .branch('test', 'beta', 'beta')
+        .branch('release/**', 'rc')
+        .branch('hotfix/**', 'rc')
+        .branch('**', 'alpha', 'alpha')
+
+// 发布时自动合并新内容的分支
+List<String> branchesReleaseMergeInto = ['main', 'master', 'test', 'develop/**']
+```
+
 ## 说明
 
-插件已发布至 Gradle Plugin Portal ，如提示下载失败，请在`settings.gradle`增加配置
+1. 若插件不生效，检查`build.gradle`是否设置了`version`属性。将`version`移除或设置为`auto`
+
+```
+group = 'com.xxx.xxx'
+version = 'auto'
+```
+
+2. 插件已发布至 Gradle Plugin Portal ，如提示下载失败，请在`settings.gradle`增加配置
 
 ```
 pluginManagement {
