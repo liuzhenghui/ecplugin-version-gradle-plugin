@@ -25,7 +25,7 @@ reckon version: 0.0.3  ->  0.0.4-alpha
 |------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | build      | 构建                                                                                                                                                                     |
 | release    | 发布新版本，示例: `gradle release -Pversion.scope=minor`。<br>可选参数: <br>1. version.scope: 指定递增范围，选项为 major、minor、patch(默认)   <br>2. version.version: 指定发布版本号，将忽略推算的版本号，如`1.2.0` |
-| releaseGUI | 图形界面发布新版本，示例: `gradle releaseGUI`。   <br>![dialog.png](http://free.yunpng.top/tu/2024/08/03/66adbb4a0e0f4.png)                                                         |
+| releaseGUI | 图形界面发布新版本，示例: `gradle releaseGUI`。   <br>![image](http://free.yunpng.top/tu/2024/08/03/66adbc59cc46a.png)                                                              |
 
 ## 配置参数
 
