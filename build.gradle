@@ -1,6 +1,6 @@
 plugins {
     id 'java'
-    id 'com.ecplugin.gradle.plugin.gitbook' version '0.0.2-rc.1+4b7e0a5'
+    id 'com.ecplugin.gradle.plugin.gitbook' version '0.0.2-rc.6+5ca40dd'
     id 'com.ecplugin.gradle.plugin.version' version '0.1.1'
 }
 
