@@ -9,6 +9,5 @@ version = 'auto'
 
 gitbook {
     root = 'document'
-    output = 'docs'
-    npmBuild = 'source ~/.zshrc && nvm use && node -v && npm install && gitbook build ./ ../book'
+    npmBuild = 'source ~/.zshrc && nvm use && node -v && npm install && gitbook build ./ ../../docs'
 }
