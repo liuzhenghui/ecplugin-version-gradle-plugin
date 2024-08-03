@@ -10,16 +10,11 @@ plugins {
 }
 ```
 
-build
+执行 `gradle build` 或者 `gradle release` 可见推算版本
 
-```
-./gradlew build
-```
-
-release
-
-```
-./gradlew release
+``` bash
+11:54:14: Executing 'build'...
+reckon version: 0.0.3  ->  0.0.4-alpha
 ```
 
 ## 说明
