@@ -1,0 +1,33 @@
+{
+  "name": "ecplugin-gitbook-gradle-plugin",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "gitbook build ./ ../../docs/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "gitbook": "3.2.3",
+    "gitbook-plugin-accordion": "1.1.3",
+    "gitbook-plugin-alerts": "0.2.0",
+    "gitbook-plugin-anchor-navigation-ex": "1.0.14",
+    "gitbook-plugin-auto-scroll-table": "0.0.5",
+    "gitbook-plugin-click-reveal": "1.0.0",
+    "gitbook-plugin-code": "0.1.0",
+    "gitbook-plugin-custom-favicon": "0.0.4",
+    "gitbook-plugin-expandable-chapters-small": "0.1.7",
+    "gitbook-plugin-favicon": "0.0.2",
+    "gitbook-plugin-flexible-alerts": "1.0.4",
+    "gitbook-plugin-hide-element": "0.0.4",
+    "gitbook-plugin-lightbox": "1.2.0",
+    "gitbook-plugin-page-toc-button": "0.1.1",
+    "gitbook-plugin-search-pro": "2.0.2",
+    "gitbook-plugin-sectionx": "3.1.0",
+    "gitbook-plugin-sharing-plus": "0.0.2",
+    "gitbook-plugin-splitter": "0.0.8",
+    "gitbook-plugin-tbfed-pagefooter": "0.0.1"
+  }
+}
