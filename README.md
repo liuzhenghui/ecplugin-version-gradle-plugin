@@ -1,5 +1,7 @@
 # ecplugin-version-gradle-plugin
 
+**[中文](README.md) | [English](README_en.md)**
+
 本项目为 Gradle 插件，用于`build`与`release`时自动根据 Git 推算版本号(遵循[semver](https://semver.org)规范)
 
 详细说明请查看[在线文档](https://liuzhenghui.github.io/ecplugin-version-gradle-plugin/)
@@ -28,7 +30,8 @@ git@github.com=username:password@https://github.com/xxx/
 ```
 
 > 1. 若用户名或密码包含`@`或者`:`，前面增加`\\`。如: `git@gitee.com=paul\\@gmail.com:pwd\\:111@https://gitee.com/xxx/`
-> 2. Github 需使用 token 方式，用户名固定为`PRIVATE-TOKEN`，密码为 token 。如：`git@github.com=PRIVATE-TOKEN:your_token@https://github.com/xxx/`
+> 2. Github 需使用 token 方式，用户名固定为`PRIVATE-TOKEN`，密码为 token
+     。如：`git@github.com=PRIVATE-TOKEN:your_token@https://github.com/xxx/`
 
 ## 方法
 
