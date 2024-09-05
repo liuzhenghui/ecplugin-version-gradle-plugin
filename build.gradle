@@ -1,13 +1,8 @@
 plugins {
     id 'java'
-    id 'com.ecplugin.gradle.plugin.gitbook' version '0.0.2-rc.6+5ca40dd'
-    id 'com.ecplugin.gradle.plugin.version' version '0.1.1'
+    id 'ecplugin-document-gradle-plugin' version '0.0.2'
+    id 'com.ecplugin.gradle.plugin.version' version '0.1.3'
 }
 
 group = 'com.ecplugin.gradle.plugin'
 version = 'auto'
-
-gitbook {
-    root = 'document'
-    npmBuild = 'source ~/.zshrc && nvm use && node -v && npm install && gitbook build ./ ../../docs'
-}
